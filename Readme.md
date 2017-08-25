@@ -69,5 +69,5 @@ const tagHttpRequest = function (http) {
 
 | 返回值类型  | 说明    | 示例                                      |
 | ------ | ----- | --------------------------------------- |
-| String | 预设值   | [success|error|warning|important] |
+| String | 预设值   | ```success|error|warning|important``` |
 | Object | 自定义标签 | ```{name: 'custom', color: '#000'}```   |
