@@ -1,0 +1,161 @@
+.conan-entry {
+    width: 120px;
+    height: 120px;
+    background: url('https://p1.meituan.net/codeman/9ab4137d17e2218c97e242f091943e6716478.png');
+    background-size: 120px auto;
+    position: fixed;
+    right: 0;
+    bottom: 50%;
+    z-index: 100000000;
+
+    .badge {
+        position: absolute;
+        right: 5px;
+        top: 30px;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+
+        font-size: 12px;
+        color: white;
+        background: rgb(255, 27, 72);
+    }
+}
+
+.conan-arrow {
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+
+    &.down {
+        transform: rotate(-45deg);
+    }
+
+    &.up {
+        transform: rotate(135deg);
+    }
+}
+
+.conan-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    height: 100px;
+    background: whitesmoke;
+    overflow-y: scroll;
+    padding-top: 10px;
+    z-index: 1000000000;
+
+    .close-icon {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        cursor: pointer;
+    }
+
+    .tab {
+        &-list {
+            border-bottom: 1px solid rgba(187, 187, 187, 0.3);
+            &-item {
+                display: inline-flex;
+                width: 33.3%;
+                justify-content: center;
+                padding: 10px 0;
+
+                &.selected {
+                    border-bottom: 5px solid rgba(187, 187, 187, 0.7);
+                }
+
+                .badge {
+                    width: 20px;
+                    height: 20px;
+                    background: #f04134;
+                    text-align: center;
+                    box-sizing: border-box;
+                    line-height: 20px;
+                    border-radius: 100%;
+                    color: white;
+                    font-size: 12px;
+                    margin-left: 5px;
+
+                    &.normal {
+                        background: #108ee9;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.conan-list {
+    background: white;
+    margin-bottom: 10px;
+    overflow: hidden;
+
+    .list-title {
+        height: 50px;
+        line-height: 50px;
+        position: relative;
+        box-sizing: border-box;
+        background: #108ee9;
+        color: white;
+
+        .value {
+            padding: 0 30px 0 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .icon {
+            position: absolute;
+            right: 5px;
+            top: 18px;
+        }
+    }
+
+    .list-body {
+        .item {
+            border-bottom: 1px dashed rgba(187, 187, 187, 0.2);
+            display: flex;
+            align-content: center;
+            margin: 8px 0;
+            position: relative;
+
+            & > div {
+                word-break: break-all;
+            }
+
+            .title {
+                width: 100px;
+                position: absolute;
+                box-sizing: border-box;
+                padding: 0 5px;
+                color: darkgray;
+            }
+
+            .value {
+                padding-left: 100px;
+            }
+        }
+    }
+}
+
+#conan {
+    .console {
+        .item {
+            padding: 5px;
+            margin-bottom: 10px;
+            background: white;
+            border-radius: 2px;
+            box-shadow: 0 0 2px white;
+            overflow: scroll;
+            line-height: 1.5;
+        }
+    }
+}

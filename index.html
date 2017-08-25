@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" />
+  <title>conan.js example</title>
+</head>
+<body>
+    <script src="/webpack/app.bundle.js"></script>
+    <script>
+        window.conan({
+          tagHttpRequest: (request) => {
+            if (request.status !== 200) {
+              return 'error';
+            }
+            return '';
+          }
+        });
+        const xhr = new XMLHttpRequest();
+        xhr.open("get","https://www.baidu.com", true);
+        xhr.setRequestHeader('content-type', 'application/json');
+        xhr.send(null);
+
+        fetch('https://www.meituan.com');
+        const c = function (v) {this.v = v};
+        console.log(new c({b: 3}));
+        const a = b;
+    </script>
+</body>
+</html>
